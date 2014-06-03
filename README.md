@@ -8,13 +8,8 @@ Python script to nuke PostgreSQL DB (non-cluster i.e.)
 1. [Overview] (#overview)
 2. [Code Description - what the Python code essentially does] (#module description)
 3. [Prerequisites] (#prerequisites)
-    * [Build out a simple PostgreSQL DB] (#Build-postgres)
-    * [Create a test database instance and populate some junk] (#create-db-junk)
-    * [Install latest version of Python GA] (#install-python)
-    * [Install stressapptest tool] (#install-stressapptest)
-4. [Usage - how to invoke the Python script] (#usage)
-5. [Limitations - OS compatibility] (#limitations)
-6. [Future enhancements - additional functionality that will be added] (#enhancements)
+4. [Limitations - OS compatibility] (#limitations)
+5. [Future enhancements - additional functionality that will be added] (#enhancements)
 
 
 ## Overview
@@ -27,35 +22,28 @@ This script will go about nuking a standalone PostgreSQL DB
 
 ## Prerequisites
 
-###
-
 * AWS/Rackspace/DigitalOcean node running Ubuntu. (I am currently running Ubunty Trusty: 14.04 LTS)
-* TZ configuration file (/etc/sysconfig/clock)
 
-## Usage
-In site.pp it is sufficient to simply add `include '::puppet-tz'` to load, install and configure TimeZone module. Parameters can also be passed to the TimeZone module by specifying the custom timezone. For example:
-```puppet
-class { '::puppet-tz':
-   timezone => 'America/Los_Angeles',
-   }
-   ```
-   
+* Install configuration management tools of choice (masterless mode is easier). I chose Puppet. Send me an email if you you want instructions to automatically spin up nodes/EC2 instances and have Puppet install and configure PostgreSQL DB
+
+* Next, install Python ( I am using Pything 3.4) and psycopg2 which is a PostgreSQL adapter. For instructions on how to install and configure Python and psycopg2 please send me an email.
+
+* Install stressapptest tool via apt-get
+
+* Programatically create test DB instance along with a table and create some garbage entries.
+
+* Configure the security groups (firewall) on the cloud management interface (AWS/RackSpace/DigitalOcean) so that PostgreSQL port 5432 is accessible
+
 ## Limitations
 
-The TimeZone puppet module has been built on and test against Puppet 3.4.2 and has also been tested on Puppet 2.7.
-The module has been tested on:
-
-* RedHat Enterprise Linux 6.x
-* CentOS 6.x
-* Ubuntu 10.04 and 12.04
-
-The TimeZone module has not been tested on Gentoo, SuSe or FreeBSD.
+The Python script has been only tested on Ubuntu (10.04 +). I have also discovered a race condition when trying to max out the userspace memory on the OS and currently working on a fix to address this.
 
 ## Enhancements
 
 Future enhancements will include:
 
-* Testing on other flavors of *nix
-* More robust RSpec test cases
+* Support for other flavors of *nix
+* Python unit test cases
+* Optimizing the program with multiprocessing.
 
 Please report bugs to satish.muthaliATgmail.com
