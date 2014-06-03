@@ -6,7 +6,7 @@ Python script to nuke PostgreSQL DB (non-cluster i.e.)
 #### Table of contents
 
 1. [Overview] (#overview)
-2. [Code Description - what the Python code essentially does] (#module description)
+2. [Code Description - what the Python code essentially does] (#code description)
 3. [Prerequisites] (#prerequisites)
 4. [Limitations - OS compatibility] (#limitations)
 5. [Future enhancements - additional functionality that will be added] (#enhancements)
