@@ -21,13 +21,13 @@ Python script to nuke PostgreSQL DB (non-cluster i.e.)
 
 The Python script will offer the user varied options to nuke a non-cluster PostgreSQL DB. This program was writted by an aimless guy (yours truly) and is intended for fun. The script has been designed and tested on Ubuntu (10.04 and abovd). Please note that the script when executed will render PostgreSQL DB unrecoverable. Caution is adviced.
 
-## Module Description
+## Code Description
 
 This script will go about nuking a standalone PostgreSQL DB
 
-## Setup
+## Prerequisites
 
-### Prerequisities
+###
 
 * AWS/Rackspace/DigitalOcean node running Ubuntu. (I am currently running Ubunty Trusty: 14.04 LTS)
 * TZ configuration file (/etc/sysconfig/clock)
