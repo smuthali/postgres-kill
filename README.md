@@ -26,7 +26,7 @@ This script will go about nuking a standalone PostgreSQL DB
 
 * Install configuration management tools of choice (masterless mode is easier). I chose Puppet. Send me an email if you you want instructions to automatically spin up nodes/EC2 instances and have Puppet install and configure PostgreSQL DB
 
-* Next, install Python ( I am using Pything 3.4) and psycopg2 which is a PostgreSQL adapter. For instructions on how to install and configure Python and psycopg2 please send me an email.
+* Next, install Python ( I am using Python 2.7.6) and psycopg2 which is a PostgreSQL adapter. For instructions on how to install and configure Python and psycopg2 please send me an email.
 
 * Install stressapptest tool via apt-get
 
