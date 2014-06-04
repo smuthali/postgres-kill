@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3.4
 
 import psycopg2
 import sys
