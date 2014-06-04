@@ -1,4 +1,4 @@
-#!/usr/bin/python3.4
+#!/usr/bin/python
 from socket import p
 import psycopg2
 import psycopg2.extras
