@@ -12,15 +12,15 @@ try:
     
     cur = con.cursor()
   
-    cur.execute("CREATE TABLE cars(id INT PRIMARY KEY, name VARCHAR(20), price INT)")
-    cur.execute("INSERT INTO cars VALUES(1,'Honda',46000)")
-    cur.execute("INSERT INTO cars VALUES(2,'Toyota',27000)")
-    cur.execute("INSERT INTO cars VALUES(3,'Subaru',32000)")
-    cur.execute("INSERT INTO cars VALUES(4,'Volvo',42000)")
-    cur.execute("INSERT INTO cars VALUES(5,'Bentley',350000)")
-    cur.execute("INSERT INTO cars VALUES(6,'Citroen',21000)")
-    cur.execute("INSERT INTO cars VALUES(7,'Cadillac',41400)")
-    cur.execute("INSERT INTO cars VALUES(8,'Volkswagen',21600)")
+    cur.execute("CREATE TABLE airlines(id INT PRIMARY KEY, name VARCHAR(100), name VARCHAR(100)")
+    cur.execute("INSERT INTO airlines VALUES(1,'Air_Canada',Canada)")
+    cur.execute("INSERT INTO cars VALUES(2,'Lufthansa',Germany)")
+    cur.execute("INSERT INTO cars VALUES(3,'Aer_Lingus',Ireland)")
+    cur.execute("INSERT INTO cars VALUES(4,'Etihad',UAE)")
+    cur.execute("INSERT INTO cars VALUES(5,'Emirates',UAE)")
+    cur.execute("INSERT INTO cars VALUES(6,'Singapore_Airlines',Singapore)")
+    cur.execute("INSERT INTO cars VALUES(7,'Qantas',Australia)")
+    cur.execute("INSERT INTO cars VALUES(8,'Air_India',India)")
     
     con.commit()
     
