@@ -441,3 +441,7 @@ def main():
         parser.print_help()
         sys.exit(2)
 
+
+# Call the main function
+if __name__ == "__main__":
+    sys.exit(main())
